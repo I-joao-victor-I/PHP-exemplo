@@ -6,22 +6,16 @@ foreach ($frutas as $indice => $frutas) {
 }
 
 $matriz = [
-    "Jorje ALencar",
-    "Daniel Hartman",
-    "Arthur Cervero",
-    "Cesar Cohen",
-    "Dante",
-    "Arnaldo Fritz",
-    "Verissimo",
-    "Lupi",
-    "Mia"
+    ["Balu", "Daniel Hartman", "Arthur Cervero"],
+    ["Cesar Cohen", "Dante", "Arnaldo Fritz"],
+    ["Verissimo", "Lupi", "Mia"]
 ];
-echo "</br>";
-echo "Melhores personagens de ordem";
+
+echo "Melhores personagens de Ordem:\n";
 
 foreach ($matriz as $linha) {
-    foreach ($linha as $piloto) {
-        echo $piloto . "|";
+    foreach ($linha as $agente) {
+        echo $agente . "|";
     }
-    echo "</br>";
+    echo '\n';
 }
