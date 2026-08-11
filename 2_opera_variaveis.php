@@ -1,5 +1,5 @@
 <?php
-//http:\\localhost/php-exemplos-basico/2_opera_variaveis.php?numero1=10&numero2=5
+//http:\\localhost/php-exemplo/2_opera_variaveis.php?numero1=10&numero2=5
 
 //recebe os valores
 $numero1 = $_GET['numero1'];
