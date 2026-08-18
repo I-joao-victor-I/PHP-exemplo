@@ -1,6 +1,7 @@
 <?php
-for ($i=1; $i >= 10; $i++) { 
-    $conta = $i*6;
-    echo "6 x $i = $conta";
+$n = readline("Digite um número para multiplicar:");
+for ($i=1; $i <= 10; $i++) {
+    $conta = $i*$n;
+    echo "$n x $i = $conta \n";
 }
 ?>
