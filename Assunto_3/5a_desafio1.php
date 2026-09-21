@@ -9,11 +9,12 @@
 
 <body>
     <form method="POST" action="">
-        <label for="nome">Insira seu nome:</label>
+        <label for="nome"> <strong>Insira seu nome:</strong></label>
         <input type="text" id="nome" name="nome" required>
+        <br>
 
-        <label for="data">Insira seu ano de nascimento:</label>
-        <input type="number" id="data" name="data" min="1900" max="<?= date('Y') ?>" required>
+        <label for="data"> <strong>Insira seu ano de nascimento:    </strong></label>
+        <input placeholder="AAAA" type="number" id="data" name="data" min="1900" max="<?= date('Y') ?>" required>
 
         <button type="submit">Cadastrar</button>
     </form>
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($idade >= 18) {
         echo "<h2>Acesso permitido, $nome! Idade atual: $idade anos.</h2>";
-        
+
         $arquivo = fopen("log_acessos.txt", "a");
         $registro = $nome . ";" . $idade . "\n";
         fwrite($arquivo, $registro);
