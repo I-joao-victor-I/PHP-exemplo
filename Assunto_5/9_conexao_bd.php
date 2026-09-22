@@ -1,0 +1,27 @@
+<?php
+$servername = 'localhost';
+$username = 'root';
+$password = 'Senai@118';
+$dbname = 'exercicio';
+try {
+    // Tenta conexão com banco de dados
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        throw new Exception("Falha na conexão" . $conn->connect_error);
+    }
+    echo "Conexão realizada com sucesso!";
+} catch (Exception $e) {
+    // exibe uma mensagem de erro
+    echo "Erro ao conectar ao banco de dados" . $e->getMessage();
+}
+
+?>
+<!-- Para criar o BD -->
+<!-- CREATE DATABASE exercicio; -->
+
+<!-- Para criar a Tabela -->
+<!-- CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL
+); -->
